@@ -12,7 +12,7 @@ const store = useGameStore();
         v-for="team in store.teams"
         :key="team.name"
         :team="team"
-        @add-player="store.addPlayer(team.id)"
+        @add-player="store.addPlayer(team)"
       />
     </div>
     <div class="flex justify-center mt-4 md:mt-8">
