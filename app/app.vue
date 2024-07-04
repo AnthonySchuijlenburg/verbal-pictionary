@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <h1>{{ $t("hello_world") }}</h1>
   </div>
 </template>
