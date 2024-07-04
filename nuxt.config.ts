@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  modules: ["@nuxtjs/i18n"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/tailwindcss"],
   i18n: {
     locales: [{ code: "nl", file: "nl.json5" }],
     lazy: true,
