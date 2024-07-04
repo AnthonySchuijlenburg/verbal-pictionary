@@ -1,4 +1,13 @@
 {
   brand: "Verbal Pictionary",
-  hello_world: "Hello World!",
+  teams: {
+    label: "Teams",
+    placeholder: "Team {id}",
+    add: "Team toevoegen",
+  },
+  players: {
+    label: "Spelers",
+    placeholder: "Speler {id}",
+    add: "Speler toevoegen",
+  },
 }
