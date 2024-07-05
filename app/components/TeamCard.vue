@@ -8,6 +8,7 @@ defineProps<{
 const emit = defineEmits<{
   (e: "addPlayer"): void;
   (e: "saveTeamName", value: string): void;
+  (e: "deleteTeam"): void;
 }>();
 </script>
 
@@ -17,6 +18,7 @@ const emit = defineEmits<{
       <InputOrDisplay
         :input-value="team.name"
         @update="(value: string) => emit('saveTeamName', value)"
+        @delete="emit('deleteTeam')"
       >
         <h3 class="text-xl">{{ team.name }}</h3>
       </InputOrDisplay>

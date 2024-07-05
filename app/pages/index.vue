@@ -13,6 +13,7 @@ const store = useGameStore();
         :team="team"
         @add-player="store.addPlayer(team)"
         @save-team-name="(value: string) => store.saveTeamName(team, value)"
+        @delete-team="store.deleteTeam(team)"
       />
     </div>
     <div class="flex justify-center mt-4 md:mt-8">

@@ -15,6 +15,7 @@ watch(
 
 const emit = defineEmits<{
   (e: "update", value: string): void;
+  (e: "delete"): void;
 }>();
 </script>
 
@@ -34,7 +35,7 @@ const emit = defineEmits<{
         <IconSave v-else @click="emit('update', modelValue)" />
       </button>
       <button>
-        <IconTrash />
+        <IconTrash @click="emit('delete')" />
       </button>
     </div>
   </div>

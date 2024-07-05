@@ -38,6 +38,10 @@ export const useGameStore = defineStore(
       team.name = name;
     };
 
+    const deleteTeam = (team: Team) => {
+      teams.value = teams.value.filter((t) => t !== team);
+    };
+
     return {
       round,
       teams,
@@ -45,6 +49,7 @@ export const useGameStore = defineStore(
       addPlayer,
       addTeam,
       saveTeamName,
+      deleteTeam,
     };
   },
   {
