@@ -6,13 +6,13 @@ const store = useGameStore();
 
 <template>
   <div>
-    <h2 class="text-2xl">{{ $t("teams.label") }}</h2>
     <div class="grid gap-4 md:grid-cols-2 md:gap-8 mt-4 md:mt-8">
       <TeamCard
         v-for="team in store.teams"
         :key="team.name"
         :team="team"
         @add-player="store.addPlayer(team)"
+        @save-team-name="(value: string) => store.saveTeamName(team, value)"
       />
     </div>
     <div class="flex justify-center mt-4 md:mt-8">

@@ -9,11 +9,15 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
+    "nuxt-lucide-icons",
   ],
   i18n: {
     locales: [{ code: "nl", file: "nl.json5" }],
     lazy: true,
     langDir: "locales",
     defaultLocale: "nl",
+  },
+  lucide: {
+    namePrefix: "Icon",
   },
 });

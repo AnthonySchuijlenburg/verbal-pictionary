@@ -5,12 +5,22 @@ defineProps<{
   team: Team;
 }>();
 
-const emit = defineEmits(["addPlayer"]);
+const emit = defineEmits<{
+  (e: "addPlayer"): void;
+  (e: "saveTeamName", value: string): void;
+}>();
 </script>
 
 <template>
-  <div class="rounded-2xl border px-4 py-2">
-    <h3 class="text-xl pb-1 border-b">{{ team.name }}</h3>
+  <div class="rounded-2xl border p-4">
+    <div class="border-b pb-2">
+      <InputOrDisplay
+        :input-value="team.name"
+        @update="(value: string) => emit('saveTeamName', value)"
+      >
+        <h3 class="text-xl">{{ team.name }}</h3>
+      </InputOrDisplay>
+    </div>
     <ol class="mt-4 flex flex-col gap-2 pb-4 border-b">
       <li
         v-for="player in team.players"

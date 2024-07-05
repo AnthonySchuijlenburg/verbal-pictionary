@@ -34,12 +34,17 @@ export const useGameStore = defineStore(
       });
     };
 
+    const saveTeamName = (team: Team, name: string) => {
+      team.name = name;
+    };
+
     return {
       round,
       teams,
       incrementRound,
       addPlayer,
       addTeam,
+      saveTeamName,
     };
   },
   {

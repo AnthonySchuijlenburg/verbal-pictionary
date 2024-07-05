@@ -4,10 +4,18 @@
     label: "Teams",
     placeholder: "Team {id}",
     add: "Team toevoegen",
+    input: {
+      label: "Team",
+      placeholder: "Naam van het team",
+    },
   },
   players: {
     label: "Spelers",
     placeholder: "Speler {id}",
     add: "Speler toevoegen",
+    input: {
+      label: "Speler",
+      placeholder: "Naam van de speler",
+    },
   },
 }
