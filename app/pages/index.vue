@@ -11,10 +11,18 @@ const store = useGameStore();
         v-for="team in store.teams"
         :key="team.name"
         :team="team"
-        @add-player="store.addPlayer(team)"
         @save-team-name="(value: string) => store.saveTeamName(team, value)"
         @delete-team="store.deleteTeam(team)"
+        @add-player="store.addPlayer(team)"
+        @save-player-name="
+          (index: number, value: string) =>
+            store.savePlayerName(team, index, value)
+        "
+        @delete-player="(index: number) => store.deletePlayer(team, index)"
       />
+      <h2 v-if="store.teams.length === 0">
+        {{ $t("teams.empty") }}
+      </h2>
     </div>
     <div class="flex justify-center mt-4 md:mt-8">
       <button
@@ -22,6 +30,14 @@ const store = useGameStore();
         @click="store.addTeam"
       >
         {{ $t("teams.add") }}
+      </button>
+    </div>
+
+    <hr class="my-8" />
+
+    <div class="flex justify-center mt-4 md:mt-8">
+      <button class="mt-2 cursor-pointer hover:underline">
+        {{ $t("start") }}
       </button>
     </div>
   </div>

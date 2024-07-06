@@ -20,11 +20,6 @@ export const useGameStore = defineStore(
       round.value++;
     };
 
-    const addPlayer = (team: Team) => {
-      const playerCount = team.players.length ?? 0;
-      team.players.push(t("players.placeholder", { id: playerCount + 1 }));
-    };
-
     const addTeam = () => {
       const teamLength = teams.value.length;
       teams.value.push({
@@ -42,14 +37,29 @@ export const useGameStore = defineStore(
       teams.value = teams.value.filter((t) => t !== team);
     };
 
+    const addPlayer = (team: Team) => {
+      const playerCount = team.players.length ?? 0;
+      team.players.push(t("players.placeholder", { id: playerCount + 1 }));
+    };
+
+    const savePlayerName = (team: Team, index: number, name: string) => {
+      team.players[index] = name;
+    };
+
+    const deletePlayer = (team: Team, index: number) => {
+      team.players.splice(index, 1);
+    };
+
     return {
       round,
       teams,
       incrementRound,
-      addPlayer,
       addTeam,
       saveTeamName,
       deleteTeam,
+      addPlayer,
+      savePlayerName,
+      deletePlayer,
     };
   },
   {

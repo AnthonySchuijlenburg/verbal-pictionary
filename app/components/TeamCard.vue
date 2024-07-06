@@ -6,9 +6,11 @@ defineProps<{
 }>();
 
 const emit = defineEmits<{
-  (e: "addPlayer"): void;
   (e: "saveTeamName", value: string): void;
   (e: "deleteTeam"): void;
+  (e: "addPlayer"): void;
+  (e: "savePlayerName", index: number, value: string): void;
+  (e: "deletePlayer", index: number): void;
 }>();
 </script>
 
@@ -24,12 +26,19 @@ const emit = defineEmits<{
       </InputOrDisplay>
     </div>
     <ol class="mt-4 flex flex-col gap-2 pb-4 border-b">
-      <li
-        v-for="player in team.players"
-        :key="player"
-        class="ml-6 pl-4 list-decimal"
-      >
-        {{ player }}
+      <template v-for="(player, index) in team.players" :key="player">
+        <InputOrDisplay
+          :input-value="player"
+          @update="(value: string) => emit('savePlayerName', index, value)"
+          @delete="emit('deletePlayer', index)"
+        >
+          <li class="ml-6 pl-4 list-decimal">
+            {{ player }}
+          </li>
+        </InputOrDisplay>
+      </template>
+      <li v-if="team.players.length === 0">
+        {{ $t("players.empty") }}
       </li>
     </ol>
     <div class="flex justify-center">

@@ -4,6 +4,7 @@
     label: "Teams",
     placeholder: "Team {id}",
     add: "Team toevoegen",
+    empty: "Er zijn nog geen teams toegevoegd",
     input: {
       label: "Team",
       placeholder: "Naam van het team",
@@ -13,9 +14,11 @@
     label: "Spelers",
     placeholder: "Speler {id}",
     add: "Speler toevoegen",
+    empty: "Er zijn nog geen spelers in dit team",
     input: {
       label: "Speler",
       placeholder: "Naam van de speler",
     },
   },
+  start: "Spel starten ->",
 }
