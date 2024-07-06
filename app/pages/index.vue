@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import TeamCard from "~/components/TeamCard.vue";
-
 const store = useGameStore();
 </script>
 
@@ -20,7 +18,7 @@ const store = useGameStore();
         "
         @delete-player="(index: number) => store.deletePlayer(team, index)"
       />
-      <h2 v-if="store.teams.length === 0">
+      <h2 v-if="store.teams?.length === 0">
         {{ $t("teams.empty") }}
       </h2>
     </div>
@@ -36,9 +34,9 @@ const store = useGameStore();
     <hr class="my-8" />
 
     <div class="flex justify-center mt-4 md:mt-8">
-      <button class="mt-2 cursor-pointer hover:underline">
+      <NuxtLink to="configuration" class="mt-2 cursor-pointer hover:underline">
         {{ $t("start") }}
-      </button>
+      </NuxtLink>
     </div>
   </div>
 </template>

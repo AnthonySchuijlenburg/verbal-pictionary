@@ -1,0 +1,20 @@
+[
+  {
+    "key": "animals",
+    "easy": ["cat", "dog", "elephant"],
+    "medium": ["giraffe", "wolf", "bear"],
+    "hard": ["hippopotamus", "rhinoceros", "elephant seal"]
+  },
+  {
+    "key": "fruits",
+    "easy": ["apple", "banana", "cherry"],
+    "medium": ["mango", "papaya", "pineapple"],
+    "hard": ["dragon fruit", "jackfruit", "durian"]
+  },
+  {
+    "key": "objects",
+    "easy": ["car", "house", "table"],
+    "medium": ["laptop", "smartphone", "television"],
+    "hard": ["microscope", "telescope", "accelerator"]
+  }
+]
