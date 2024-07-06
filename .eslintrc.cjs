@@ -12,5 +12,6 @@ module.exports = {
   plugins: [],
   rules: {
     "no-console": "error",
+    "linebreak-style": ["error", "unix"],
   },
 };
