@@ -19,6 +19,7 @@ export const useCategoryStore = defineStore(
     persist: {
       storage: persistedState.cookiesWithOptions({
         sameSite: "strict",
+        maxAge: 60 * 60 * 24 * 7,
       }),
     },
   },
