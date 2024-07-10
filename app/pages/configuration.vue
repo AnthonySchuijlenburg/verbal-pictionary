@@ -6,10 +6,10 @@ const wordsStore = useWordsStore();
 <template>
   <div>
     <CategoryFilter
-      v-for="category of Object.keys(categoryStore.enabledCategories)"
-      :key="category"
-      :category="category"
-      :filters="categoryStore.enabledCategories[category]"
+      v-for="(category, key) of categoryStore.enabledCategories"
+      :key="key"
+      :category="key"
+      :filters="category"
     />
 
     {{ wordsStore.words }}

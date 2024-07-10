@@ -5,7 +5,7 @@ const categoryStore = useCategoryStore();
 
 const props = defineProps<{
   category: keyof Filters;
-  filters: Filter | undefined;
+  filters: Filter;
 }>();
 
 function setCategory(event: Event, difficulty: keyof Filter) {
