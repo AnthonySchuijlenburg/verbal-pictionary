@@ -10,15 +10,13 @@ export const useWordsStore = defineStore(
 
     const words = ref<string[]>(useWords(categoryStore.enabledCategories));
 
-    watch(categoryStore.enabledCategories, () => {
-      if (
-        JSON.stringify(categoryStore.enabledCategories) ===
-        lastUsedCategories.value
-      ) {
+    watch(categoryStore.enabledCategories, (filters) => {
+      if (JSON.stringify(filters) === lastUsedCategories.value) {
         return;
       }
 
-      words.value = useWords(categoryStore.enabledCategories);
+      lastUsedCategories.value = JSON.stringify(filters);
+      words.value = useWords(filters);
     });
 
     return {

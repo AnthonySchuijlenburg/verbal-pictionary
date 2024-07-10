@@ -21,4 +21,15 @@
     },
   },
   start: "Spel starten ->",
+  difficulties: {
+    easy: "Makkelijk",
+    medium: "Gemiddeld",
+    hard: "Moeilijk",
+    all: "Alle {category}",
+  },
+  categories: {
+    animals: "Dieren",
+    fruits: "Fruit",
+    objects: "Voorwerpen",
+  },
 }
