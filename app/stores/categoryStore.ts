@@ -4,11 +4,7 @@ import type { Filter, Filters } from "~/types/Filter";
 export const useCategoryStore = defineStore(
   "categories",
   () => {
-    const enabledCategories = ref<Filters>({
-      animals: { easy: true, medium: true, hard: true },
-      fruits: { easy: true, medium: true, hard: true },
-      objects: { easy: true, medium: true, hard: true },
-    });
+    const enabledCategories = ref<Filters>(useCategories());
 
     function setCategory(
       key: keyof Filters,
