@@ -46,5 +46,11 @@
     animals: "Dieren",
     fruits: "Fruit",
     objects: "Voorwerpen",
+    countries: "Landen",
+    sports: "Sporten",
+    colors: "Kleuren",
+    professions: "Beroepen",
+    plants: "Planten",
+    instruments: "Instrumenten",
   },
 }

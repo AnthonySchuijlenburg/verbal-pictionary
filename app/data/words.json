@@ -1,20 +1,392 @@
 [
   {
     "key": "animals",
-    "easy": ["cat", "dog", "elephant"],
-    "medium": ["giraffe", "wolf", "bear"],
-    "hard": ["hippopotamus", "rhinoceros", "elephant seal"]
+    "easy": [
+      "cat",
+      "dog",
+      "elephant",
+      "fish",
+      "rabbit",
+      "mouse",
+      "cow",
+      "horse",
+      "sheep",
+      "pig"
+    ],
+    "medium": [
+      "giraffe",
+      "wolf",
+      "bear",
+      "lion",
+      "tiger",
+      "zebra",
+      "leopard",
+      "panda",
+      "koala",
+      "crocodile"
+    ],
+    "hard": [
+      "hippopotamus",
+      "rhinoceros",
+      "eagle",
+      "kangaroo",
+      "penguin",
+      "dolphin",
+      "octopus",
+      "ostrich",
+      "peacock",
+      "chimpanzee"
+    ]
   },
   {
     "key": "fruits",
-    "easy": ["apple", "banana", "cherry"],
-    "medium": ["mango", "papaya", "pineapple"],
-    "hard": ["dragon fruit", "jackfruit", "durian"]
+    "easy": [
+      "apple",
+      "banana",
+      "cherry",
+      "grape",
+      "orange",
+      "pear",
+      "peach",
+      "plum",
+      "kiwi",
+      "lemon"
+    ],
+    "medium": [
+      "mango",
+      "papaya",
+      "pineapple",
+      "kiwi",
+      "blueberry",
+      "strawberry",
+      "blackberry",
+      "raspberry",
+      "nectarine",
+      "apricot"
+    ],
+    "hard": [
+      "dragon fruit",
+      "jackfruit",
+      "pomegranate",
+      "coconut",
+      "lychee",
+      "guava",
+      "passion fruit",
+      "persimmon",
+      "quince",
+      "starfruit"
+    ]
   },
   {
     "key": "objects",
-    "easy": ["car", "house", "table"],
-    "medium": ["laptop", "smartphone", "television"],
-    "hard": ["microscope", "telescope", "accelerator"]
+    "easy": [
+      "car",
+      "house",
+      "table",
+      "chair",
+      "book",
+      "pen",
+      "cup",
+      "phone",
+      "shoe",
+      "hat"
+    ],
+    "medium": [
+      "laptop",
+      "smartphone",
+      "television",
+      "camera",
+      "watch",
+      "microwave",
+      "printer",
+      "speaker",
+      "lamp",
+      "backpack"
+    ],
+    "hard": [
+      "microscope",
+      "telescope",
+      "blender",
+      "sewing machine",
+      "projector",
+      "thermometer",
+      "kaleidoscope",
+      "binoculars",
+      "barometer",
+      "accordion"
+    ]
+  },
+  {
+    "key": "countries",
+    "easy": [
+      "USA",
+      "Canada",
+      "Mexico",
+      "Brazil",
+      "UK",
+      "France",
+      "Germany",
+      "Italy",
+      "Spain",
+      "Australia"
+    ],
+    "medium": [
+      "Japan",
+      "China",
+      "India",
+      "Russia",
+      "South Africa",
+      "Argentina",
+      "Egypt",
+      "Turkey",
+      "Norway",
+      "Sweden"
+    ],
+    "hard": [
+      "Kazakhstan",
+      "Ethiopia",
+      "Uzbekistan",
+      "Bangladesh",
+      "Venezuela",
+      "Cambodia",
+      "Madagascar",
+      "Angola",
+      "Bolivia",
+      "Croatia"
+    ]
+  },
+  {
+    "key": "sports",
+    "easy": [
+      "soccer",
+      "basketball",
+      "baseball",
+      "tennis",
+      "golf",
+      "swimming",
+      "running",
+      "boxing",
+      "volleyball",
+      "hockey"
+    ],
+    "medium": [
+      "rugby",
+      "cricket",
+      "badminton",
+      "squash",
+      "table tennis",
+      "skiing",
+      "snowboarding",
+      "skateboarding",
+      "surfing",
+      "cycling"
+    ],
+    "hard": [
+      "water polo",
+      "handball",
+      "fencing",
+      "archery",
+      "trampolining",
+      "equestrian",
+      "biathlon",
+      "curling",
+      "judo",
+      "kayaking"
+    ]
+  },
+  {
+    "key": "colors",
+    "easy": [
+      "red",
+      "blue",
+      "green",
+      "yellow",
+      "black",
+      "white",
+      "orange",
+      "pink",
+      "purple",
+      "brown"
+    ],
+    "medium": [
+      "magenta",
+      "turquoise",
+      "teal",
+      "maroon",
+      "navy",
+      "olive",
+      "peach",
+      "lime",
+      "gold",
+      "silver"
+    ],
+    "hard": [
+      "cerulean",
+      "vermillion",
+      "chartreuse",
+      "fuchsia",
+      "aubergine",
+      "mauve",
+      "saffron",
+      "periwinkle",
+      "indigo",
+      "taupe"
+    ]
+  },
+  {
+    "key": "vehicles",
+    "easy": [
+      "car",
+      "bus",
+      "bike",
+      "boat",
+      "train",
+      "plane",
+      "truck",
+      "scooter",
+      "motorcycle",
+      "van"
+    ],
+    "medium": [
+      "submarine",
+      "helicopter",
+      "limousine",
+      "jeep",
+      "ferry",
+      "cruise ship",
+      "convertible",
+      "trailer",
+      "snowmobile",
+      "ambulance"
+    ],
+    "hard": [
+      "hovercraft",
+      "segway",
+      "glider",
+      "bulldozer",
+      "rickshaw",
+      "blimp",
+      "hoverboard",
+      "funicular",
+      "tandem bike",
+      "jet ski"
+    ]
+  },
+  {
+    "key": "professions",
+    "easy": [
+      "teacher",
+      "doctor",
+      "nurse",
+      "police officer",
+      "firefighter",
+      "chef",
+      "waiter",
+      "cashier",
+      "farmer",
+      "builder"
+    ],
+    "medium": [
+      "engineer",
+      "architect",
+      "scientist",
+      "pilot",
+      "mechanic",
+      "electrician",
+      "lawyer",
+      "plumber",
+      "librarian",
+      "photographer"
+    ],
+    "hard": [
+      "actuary",
+      "cartographer",
+      "paleontologist",
+      "criminologist",
+      "sommelier",
+      "orthodontist",
+      "audiologist",
+      "herpetologist",
+      "toxicologist",
+      "gerontologist"
+    ]
+  },
+  {
+    "key": "plants",
+    "easy": [
+      "rose",
+      "tulip",
+      "daisy",
+      "sunflower",
+      "cactus",
+      "fern",
+      "lily",
+      "orchid",
+      "ivy",
+      "bamboo"
+    ],
+    "medium": [
+      "lavender",
+      "chrysanthemum",
+      "marigold",
+      "begonia",
+      "hydrangea",
+      "hibiscus",
+      "poinsettia",
+      "azalea",
+      "daffodil",
+      "jasmine"
+    ],
+    "hard": [
+      "bougainvillea",
+      "eucalyptus",
+      "anthurium",
+      "fuchsia",
+      "magnolia",
+      "camellia",
+      "gardenia",
+      "oleander",
+      "wisteria",
+      "yucca"
+    ]
+  },
+  {
+    "key": "instruments",
+    "easy": [
+      "guitar",
+      "piano",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "cello",
+      "clarinet",
+      "trombone"
+    ],
+    "medium": [
+      "harp",
+      "accordion",
+      "banjo",
+      "ukulele",
+      "xylophone",
+      "oboe",
+      "mandolin",
+      "bassoon",
+      "marimba",
+      "harmonica"
+    ],
+    "hard": [
+      "didgeridoo",
+      "theremin",
+      "dulcimer",
+      "zither",
+      "bouzouki",
+      "hurdy-gurdy",
+      "balalaika",
+      "shamisen",
+      "crumhorn",
+      "ocarina"
+    ]
   }
 ]
