@@ -1,18 +1,32 @@
 import { defineStore } from "pinia";
-import type { Filters } from "~/types/Filter";
+import type { Filter, Filters } from "~/types/Filter";
 
 export const useCategoryStore = defineStore(
-  "words",
+  "categories",
   () => {
-    // const { t } = useI18n();
     const enabledCategories = ref<Filters>({
       animals: { easy: true, medium: true, hard: true },
       fruits: { easy: true, medium: true, hard: true },
       objects: { easy: true, medium: true, hard: true },
     });
 
+    function setCategory(
+      key: keyof Filters,
+      difficulty: keyof Filter,
+      value: boolean,
+    ) {
+      const category = enabledCategories.value[key];
+
+      if (!category) {
+        return;
+      }
+
+      category[difficulty] = value;
+    }
+
     return {
       enabledCategories,
+      setCategory,
     };
   },
   {
