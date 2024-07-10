@@ -1,8 +1,6 @@
 <script setup lang="ts">
 const categoryStore = useCategoryStore();
-const words = computed(() => {
-  return useWords(categoryStore.enabledCategories);
-});
+const wordsStore = useWordsStore();
 </script>
 
 <template>
@@ -14,6 +12,6 @@ const words = computed(() => {
       :filters="categoryStore.enabledCategories[category]"
     />
 
-    {{ words }}
+    {{ wordsStore.words }}
   </div>
 </template>
