@@ -1,41 +1,28 @@
 <script setup lang="ts">
 const store = useGameStore();
+const { t } = useI18n();
+
+const ctaLabel = computed(() => {
+  return store.round === 0 ? t("start") : t("resume");
+});
+
+const sections = ["discover", "why", "open_source"];
 </script>
 
 <template>
   <div>
-    <div class="grid gap-4 md:grid-cols-2 md:gap-8 mt-4 md:mt-8">
-      <TeamCard
-        v-for="team in store.teams"
-        :key="team.name"
-        :team="team"
-        @save-team-name="(value: string) => store.saveTeamName(team, value)"
-        @delete-team="store.deleteTeam(team)"
-        @add-player="store.addPlayer(team)"
-        @save-player-name="
-          (index: number, value: string) =>
-            store.savePlayerName(team, index, value)
-        "
-        @delete-player="(index: number) => store.deletePlayer(team, index)"
-      />
-      <h2 v-if="store.teams?.length === 0">
-        {{ $t("teams.empty") }}
+    <div v-for="section in sections" :key="section" class="mb-8">
+      <h2 class="text-xl font-medium mb-2">
+        {{ $t(`homepage.${section}.title`) }}
       </h2>
-    </div>
-    <div class="flex justify-center mt-4 md:mt-8">
-      <button
-        class="mt-2 cursor-pointer hover:underline"
-        @click="store.addTeam"
-      >
-        {{ $t("teams.add") }}
-      </button>
+      <p>{{ $t(`homepage.${section}.content`) }}</p>
     </div>
 
     <hr class="my-8" />
 
     <div class="flex justify-center mt-4 md:mt-8">
-      <NuxtLink to="configuration" class="mt-2 cursor-pointer hover:underline">
-        {{ $t("start") }}
+      <NuxtLink to="/teams" class="mt-2 cursor-pointer hover:underline">
+        {{ ctaLabel }}
       </NuxtLink>
     </div>
   </div>

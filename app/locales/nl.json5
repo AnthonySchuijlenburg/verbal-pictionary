@@ -1,5 +1,21 @@
 {
   brand: "Verbal Pictionary",
+  start: "Spel starten ->",
+  resume: "Spel hervatten ->",
+  homepage: {
+    discover: {
+      title: "Ontdek Verbal Pictionary",
+      content: "Verbal Pictionary is een spannend nieuw teamspel waarin één persoon een woord beschrijft zonder het te noemen, en de rest van het team het woord moet raden. Het is een perfect spel voor vrienden, families en collega's die van een uitdaging houden.",
+    },
+    why: {
+      title: "Waarom Verbal Pictionary?",
+      content: "Ik heb Verbal Pictionary gemaakt omdat er geen goede gratis alternatieven beschikbaar waren. Veel bestaande spellen zijn duur of missen kwaliteit en flexibiliteit. Daarom besloot ik om een toegankelijk en leuk spel te ontwikkelen voor iedereen.",
+    },
+    open_source: {
+      title: "Open Source",
+      content: "Verbal Pictionary is open source. Dit betekent dat iedereen de broncode kan bekijken, aanpassen en verbeteren. Door het spel open source te maken, hoop ik een gemeenschap te creëren die bijdraagt aan de voortdurende verbetering ervan.",
+    },
+  },
   teams: {
     label: "Teams",
     placeholder: "Team {id}",
@@ -20,7 +36,6 @@
       placeholder: "Naam van de speler",
     },
   },
-  start: "Spel starten ->",
   difficulties: {
     easy: "Makkelijk",
     medium: "Gemiddeld",
