@@ -1,9 +1,8 @@
 <script setup lang="ts">
-const store = useGameStore();
 const { t } = useI18n();
 
 const ctaLabel = computed(() => {
-  return store.round === 0 ? t("start") : t("resume");
+  return t("start");
 });
 
 const sections = ["discover", "why", "open_source"];

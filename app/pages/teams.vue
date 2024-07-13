@@ -1,23 +1,11 @@
 <script setup lang="ts">
-const store = useGameStore();
+const store = useTeamStore();
 </script>
 
 <template>
   <div>
     <div class="grid gap-4 md:grid-cols-2 md:gap-8 mt-4 md:mt-8">
-      <TeamCard
-        v-for="team in store.teams"
-        :key="team.name"
-        :team="team"
-        @save-team-name="(value: string) => store.saveTeamName(team, value)"
-        @delete-team="store.deleteTeam(team)"
-        @add-player="store.addPlayer(team)"
-        @save-player-name="
-          (index: number, value: string) =>
-            store.savePlayerName(team, index, value)
-        "
-        @delete-player="(index: number) => store.deletePlayer(team, index)"
-      />
+      <TeamCard v-for="team in store.teams" :key="team.id" :team="team" />
       <h2 v-if="store.teams?.length === 0">
         {{ $t("teams.empty") }}
       </h2>

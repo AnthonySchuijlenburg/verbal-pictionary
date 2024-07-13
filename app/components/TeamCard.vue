@@ -1,16 +1,10 @@
 <script setup lang="ts">
 import type { Team } from "~/types/Team";
 
+const teamStore = useTeamStore();
+
 defineProps<{
   team: Team;
-}>();
-
-const emit = defineEmits<{
-  (e: "saveTeamName", value: string): void;
-  (e: "deleteTeam"): void;
-  (e: "addPlayer"): void;
-  (e: "savePlayerName", index: number, value: string): void;
-  (e: "deletePlayer", index: number): void;
 }>();
 </script>
 
@@ -19,18 +13,20 @@ const emit = defineEmits<{
     <div class="border-b pb-2">
       <InputOrDisplay
         :input-value="team.name"
-        @update="(value: string) => emit('saveTeamName', value)"
-        @delete="emit('deleteTeam')"
+        @update="(value: string) => teamStore.saveTeamName(team, value)"
+        @delete="teamStore.deleteTeam(team.id)"
       >
         <h3 class="text-xl">{{ team.name }}</h3>
       </InputOrDisplay>
     </div>
     <ol class="mt-4 flex flex-col gap-2 pb-4 border-b">
-      <template v-for="(player, index) in team.players" :key="player">
+      <template v-for="player in team.players" :key="player.id">
         <InputOrDisplay
-          :input-value="player"
-          @update="(value: string) => emit('savePlayerName', index, value)"
-          @delete="emit('deletePlayer', index)"
+          :input-value="player.name"
+          @update="
+            (value: string) => teamStore.savePlayerName(team, player.id, value)
+          "
+          @delete="teamStore.deletePlayer(team, player.id)"
         >
           <li class="ml-6 pl-4 list-decimal">
             {{ player }}
@@ -44,7 +40,7 @@ const emit = defineEmits<{
     <div class="flex justify-center">
       <button
         class="mt-2 cursor-pointer hover:underline"
-        @click="emit('addPlayer')"
+        @click="teamStore.addPlayer(team)"
       >
         {{ $t("players.add") }}
       </button>

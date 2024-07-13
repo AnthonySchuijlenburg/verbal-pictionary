@@ -9,6 +9,7 @@ export const useWordsStore = defineStore("words", () => {
   const words = ref<string[]>(useWords(categoryStore.enabledCategories));
 
   watch(categoryStore.enabledCategories, (filters) => {
+    // Don't update words if the filters haven't changed
     if (JSON.stringify(filters) === lastUsedCategories.value) {
       return;
     }
