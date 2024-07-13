@@ -182,7 +182,7 @@
       "cycling"
     ],
     "hard": [
-      "water polo",
+      "water_polo",
       "handball",
       "fencing",
       "archery",
@@ -269,7 +269,7 @@
       "hoverboard",
       "funicular",
       "tandem_bike",
-      "jet ski"
+      "jet_ski"
     ]
   },
   {
