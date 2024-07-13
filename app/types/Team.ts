@@ -1,5 +1,5 @@
 export type Team = {
-  id?: number;
+  id: string;
   name: string;
   score: number;
   players: string[];

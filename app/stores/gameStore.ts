@@ -6,23 +6,19 @@ export const useGameStore = defineStore(
   () => {
     const { t } = useI18n();
 
-    const round = ref<number>(0);
-
     const teams = ref<Team[]>([
       {
+        id: useUuid(),
         name: "Team 1",
         score: 0,
         players: ["Player 1", "Player 2"],
       },
     ]);
 
-    const incrementRound = () => {
-      round.value++;
-    };
-
     const addTeam = () => {
       const teamLength = teams.value.length;
       teams.value.push({
+        id: useUuid(),
         name: t("teams.placeholder", { id: teamLength + 1 }),
         score: 0,
         players: [t("players.placeholder", { id: 1 })],
@@ -51,9 +47,7 @@ export const useGameStore = defineStore(
     };
 
     return {
-      round,
       teams,
-      incrementRound,
       addTeam,
       saveTeamName,
       deleteTeam,
