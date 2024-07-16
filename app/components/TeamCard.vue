@@ -29,7 +29,7 @@ defineProps<{
           @delete="teamStore.deletePlayer(team, player.id)"
         >
           <li class="ml-6 pl-4 list-decimal">
-            {{ player }}
+            {{ player.name }}
           </li>
         </InputOrDisplay>
       </template>

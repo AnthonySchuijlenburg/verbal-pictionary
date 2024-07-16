@@ -28,6 +28,10 @@ const allSelected = computed({
   },
 });
 
+const noneSelected = computed(() => {
+  return Object.values(props.filters).every((filter) => !filter);
+});
+
 const categoryLabel = computed(() => {
   const category = te(`categories.${props.category}`)
     ? t(`categories.${props.category}`)
@@ -38,13 +42,18 @@ const categoryLabel = computed(() => {
 </script>
 
 <template>
-  <div class="rounded-2xl border p-4" :class="{ 'bg-gray-100': !allSelected }">
+  <div class="rounded-2xl border p-4" :class="{ 'bg-gray-100': noneSelected }">
     <div
       class="flex justify-between"
       :class="{ 'border-b pb-4 ': detailsOpened }"
     >
       <label class="flex justify-center items-center gap-2">
-        <input v-model="allSelected" type="checkbox" class="cursor-pointer" />
+        <input
+          v-model="allSelected"
+          :indeterminate.prop="!allSelected && !noneSelected"
+          type="checkbox"
+          class="cursor-pointer"
+        />
         {{ categoryLabel }}
       </label>
       <button
