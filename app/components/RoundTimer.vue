@@ -1,0 +1,39 @@
+<script setup lang="ts">
+const roundStore = useRoundStore();
+let interval: NodeJS.Timeout;
+
+const emit = defineEmits<{
+  (e: "finished"): void;
+}>();
+
+onMounted(() => {
+  interval = setInterval(() => {
+    const round = roundStore.rounds[roundStore.rounds.length - 1];
+
+    if (!round) {
+      throw new Error("No round found");
+    }
+
+    if (round.timer === 0) {
+      clearInterval(interval);
+      emit("finished");
+    } else {
+      round.timer -= 1;
+    }
+  }, 1000);
+});
+</script>
+
+<template>
+  <div class="rounded-2xl border p-4">
+    <div class="flex justify-center">
+      <h2 class="text-xl font-medium">
+        {{
+          $t("round.time", {
+            time: roundStore.rounds[roundStore.rounds.length - 1]?.timer || 0,
+          })
+        }}
+      </h2>
+    </div>
+  </div>
+</template>

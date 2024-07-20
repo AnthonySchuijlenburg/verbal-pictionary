@@ -37,6 +37,16 @@ export const useTeamStore = defineStore(
       teams.value = teams.value.filter((team: Team) => team.id !== id);
     };
 
+    const getTeam = (id: string): Team => {
+      const team = teams.value.find((team: Team) => team.id === id);
+
+      if (!team) {
+        throw new Error("Team not found");
+      }
+
+      return team;
+    };
+
     const addPlayer = (team: Team) => {
       const playerCount = team.players.length ?? 0;
       team.players.push({
@@ -63,6 +73,7 @@ export const useTeamStore = defineStore(
       addTeam,
       saveTeamName,
       deleteTeam,
+      getTeam,
       addPlayer,
       savePlayerName,
       deletePlayer,

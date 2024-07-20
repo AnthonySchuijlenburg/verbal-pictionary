@@ -18,7 +18,18 @@ export const useWordsStore = defineStore("words", () => {
     words.value = useWords(filters);
   });
 
+  function getNextWords(amount: number = 5) {
+    if (amount > words.value.length) {
+      throw new Error("Not enough words left");
+    }
+
+    const nextWords = words.value.slice(0, amount);
+    words.value = words.value.slice(amount);
+    return nextWords;
+  }
+
   return {
     words,
+    getNextWords,
   };
 });

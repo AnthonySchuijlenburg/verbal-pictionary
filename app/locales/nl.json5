@@ -36,6 +36,13 @@
       placeholder: "Naam van de speler",
     },
   },
+  round: {
+    label: "Ronde",
+    number: "Ronde {number}",
+    time: "Tijd over: {time}",
+    next: "Naar de volgende ronde ->",
+    summary: "Tussenstand",
+  },
   pre_round: {
     caution: "Let op! Volgende spelers:",
     next: "De volgende speler is aan de beurt: {name}",

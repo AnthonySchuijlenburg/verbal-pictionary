@@ -1,6 +1,10 @@
 <script setup lang="ts">
+const { t } = useI18n();
 const categoryStore = useCategoryStore();
-const wordsStore = useWordsStore();
+
+const ctaLabel = computed(() => {
+  return t("start");
+});
 </script>
 
 <template>
@@ -30,6 +34,15 @@ const wordsStore = useWordsStore();
       />
     </div>
 
-    {{ wordsStore.words }}
+    <hr class="my-8" />
+
+    <div class="flex justify-center mt-4 md:mt-8">
+      <NuxtLink
+        to="/game/pre-round"
+        class="mt-2 cursor-pointer hover:underline"
+      >
+        {{ ctaLabel }}
+      </NuxtLink>
+    </div>
   </div>
 </template>

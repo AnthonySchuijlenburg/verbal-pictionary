@@ -17,13 +17,22 @@ const emit = defineEmits<{
   (e: "update", value: string): void;
   (e: "delete"): void;
 }>();
+
+function save() {
+  emit("update", modelValue.value);
+  editing.value = !editing.value;
+}
 </script>
 
 <template>
   <div class="flex justify-between align-center gap-4">
     <template v-if="editing">
-      <form class="w-full" @submit.prevent="emit('update', modelValue)">
-        <StyledInput v-model="modelValue" translation-key="teams.input" />
+      <form class="w-full" @submit.prevent="save">
+        <StyledInput
+          v-model="modelValue"
+          translation-key="teams.input"
+          @keyup.enter="save"
+        />
       </form>
     </template>
     <div v-else>
