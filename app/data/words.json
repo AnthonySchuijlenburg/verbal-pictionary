@@ -65,15 +65,11 @@
       "apricot"
     ],
     "hard": [
-      "dragon_fruit",
-      "jackfruit",
       "pomegranate",
       "coconut",
       "lychee",
       "guava",
       "passion_fruit",
-      "persimmon",
-      "quince",
       "starfruit"
     ]
   },
@@ -110,10 +106,7 @@
       "sewing_machine",
       "projector",
       "thermometer",
-      "kaleidoscope",
-      "binoculars",
-      "barometer",
-      "accordion"
+      "binoculars"
     ]
   },
   {
@@ -145,12 +138,10 @@
     "hard": [
       "kazakhstan",
       "ethiopia",
-      "uzbekistan",
       "bangladesh",
       "venezuela",
       "cambodia",
       "madagascar",
-      "angola",
       "bolivia",
       "croatia"
     ]
@@ -189,7 +180,6 @@
       "trampolining",
       "equestrian",
       "biathlon",
-      "curling",
       "judo",
       "kayaking"
     ]
@@ -203,7 +193,6 @@
       "yellow",
       "black",
       "white",
-      "orange",
       "pink",
       "purple",
       "brown"
@@ -211,8 +200,6 @@
     "medium": [
       "magenta",
       "turquoise",
-      "teal",
-      "maroon",
       "navy",
       "olive",
       "peach",
@@ -220,18 +207,7 @@
       "gold",
       "silver"
     ],
-    "hard": [
-      "cerulean",
-      "vermillion",
-      "chartreuse",
-      "fuchsia",
-      "aubergine",
-      "mauve",
-      "saffron",
-      "periwinkle",
-      "indigo",
-      "taupe"
-    ]
+    "hard": ["cerulean", "fuchsia", "aubergine", "indigo"]
   },
   {
     "key": "vehicles",
@@ -264,10 +240,8 @@
       "segway",
       "glider",
       "bulldozer",
-      "rickshaw",
       "blimp",
       "hoverboard",
-      "funicular",
       "tandem_bike",
       "jet_ski"
     ]
@@ -299,7 +273,6 @@
       "photographer"
     ],
     "hard": [
-      "actuary",
       "cartographer",
       "paleontologist",
       "criminologist",
@@ -319,36 +292,13 @@
       "daisy",
       "sunflower",
       "cactus",
-      "fern",
       "lily",
       "orchid",
       "bonsai",
       "bamboo"
     ],
-    "medium": [
-      "lavender",
-      "chrysanthemum",
-      "marigold",
-      "begonia",
-      "hydrangea",
-      "hibiscus",
-      "poinsettia",
-      "azalea",
-      "daffodil",
-      "jasmine"
-    ],
-    "hard": [
-      "bougainvillea",
-      "eucalyptus",
-      "anthurium",
-      "fuchsia",
-      "magnolia",
-      "camellia",
-      "gardenia",
-      "oleander",
-      "wisteria",
-      "yucca"
-    ]
+    "medium": ["lavender", "marigold", "hydrangea", "daffodil", "jasmine"],
+    "hard": ["eucalyptus", "magnolia", "wisteria"]
   },
   {
     "key": "instruments",
@@ -370,23 +320,79 @@
       "banjo",
       "ukulele",
       "xylophone",
-      "oboe",
-      "mandolin",
-      "bassoon",
       "marimba",
       "harmonica"
     ],
+    "hard": ["didgeridoo", "ocarina"]
+  },
+  {
+    "key": "famous_people",
+    "easy": [
+      "barack_obama",
+      "donald_trump",
+      "bill_gates",
+      "steve_jobs",
+      "oprah_winfrey",
+      "madonna",
+      "beyonce",
+      "rihanna",
+      "justin_bieber",
+      "taylor_swift",
+      "michael_jackson",
+      "michael_shumacher",
+      "gordon_ramsay"
+    ],
+    "medium": [
+      "albert_einstein",
+      "isaac_newton",
+      "mozart",
+      "picasso",
+      "shakespeare",
+      "salvador_dali",
+      "gandhi",
+      "winston_churchill",
+      "jimmy_hendrix",
+      "lewis_hamilton"
+    ],
     "hard": [
-      "didgeridoo",
-      "theremin",
-      "dulcimer",
-      "zither",
-      "bouzouki",
-      "hurdy_gurdy",
-      "balalaika",
-      "shamisen",
-      "crumhorn",
-      "ocarina"
+      "shaquille_oneal",
+      "snoop_dogg",
+      "kim_kardashian",
+      "mason_ramsey",
+      "eminem",
+      "kanye_west"
+    ]
+  },
+  {
+    "key": "famous_dutch_people",
+    "easy": [
+      "anne_frank",
+      "vincent_van_gogh",
+      "rembrandt",
+      "johan_cruyff",
+      "armin_van_buuren",
+      "dj_tiesto",
+      "andre_rieu",
+      "doutzen_kroes",
+      "ali_b"
+    ],
+    "medium": [
+      "max_verstappen",
+      "epke_zonderland",
+      "daphne_schippers",
+      "tom_dumoulin",
+      "sven_kramer",
+      "ireen_wust"
+    ],
+    "hard": [
+      "roel_van_velzen",
+      "humberto_tan",
+      "jeroen_van_koningsbrugge",
+      "johan_derksen",
+      "wilfred_genee",
+      "gerard_joling",
+      "gordon_heuckeroth",
+      "mobicep"
     ]
   }
 ]
