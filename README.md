@@ -1,75 +1,41 @@
-# Nuxt 3 Minimal Starter
+# Verbal Pictionary
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A web application for playing Verbal Picionary with friends. The game is a mix of Pictionary and charades, where players take turns describing a word or phrase without saying (part of) it and the other players have to guess what it is.
 
-## Setup
+This project has been made because of the lack of a good online version of the game. The goal is to make a simple, easy to use, and most importantly free (of ads) web application for playing Verbal Pictionary with friends.
+
+The project is built with [Nuxt.js](https://nuxtjs.org/), a Vue.js framework, and uses [Tailwind CSS](https://tailwindcss.com/) for styling. A live version of this project can be found on [verbal-pictionary.pages.dev](https://verbal-pictionary.pages.dev/).
+
+## Contributing
+
+Contributions are welcome! If you have any ideas for improvements or new features, feel free to open an issue or create a pull request.
+
+### Setting it up locally
 
 Make sure to install the dependencies:
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+### Development Server
 
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+### Production
 
 Build the application for production:
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
 npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
