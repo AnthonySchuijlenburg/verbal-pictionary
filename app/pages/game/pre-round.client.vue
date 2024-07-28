@@ -3,7 +3,7 @@ const { t } = useI18n();
 const roundStore = useRoundStore();
 const teamStore = useTeamStore();
 
-onMounted(() => {
+onBeforeMount(() => {
   if (
     !roundStore.rounds[roundStore.rounds.length - 1] ||
     roundStore.rounds[roundStore.rounds.length - 1]?.finished

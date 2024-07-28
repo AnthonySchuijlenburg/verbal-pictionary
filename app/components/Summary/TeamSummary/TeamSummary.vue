@@ -26,7 +26,9 @@ const computedScore = computed(() => {
       {{ team.name }}
     </span>
     <span>
-      {{ computedScore }}
+      <ClientOnly>
+        {{ computedScore }}
+      </ClientOnly>
     </span>
   </div>
 </template>
