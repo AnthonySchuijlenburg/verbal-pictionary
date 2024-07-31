@@ -12,7 +12,10 @@ export default defineNuxtConfig({
     "nuxt-lucide-icons",
   ],
   i18n: {
-    locales: [{ code: "nl", file: "nl.json5" }],
+    locales: [
+      { code: "nl", files: ["nl.json5", "words.nl.json5"] },
+      { code: "en", files: ["en.json5", "words.en.json5"] },
+    ],
     lazy: true,
     langDir: "locales",
     defaultLocale: "nl",
