@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const roundStore = useRoundStore();
+const soundsStore = useSoundsStore();
 let interval: NodeJS.Timeout;
 
 const emit = defineEmits<{
@@ -17,6 +18,7 @@ onMounted(() => {
     if (round.timer === 0) {
       clearInterval(interval);
       emit("finished");
+      soundsStore.playSound();
     } else {
       round.timer -= 1;
     }

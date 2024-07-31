@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
 const categoryStore = useCategoryStore();
+const soundsStore = useSoundsStore();
 
 const ctaLabel = computed(() => {
   return t("start");
@@ -40,6 +41,7 @@ const ctaLabel = computed(() => {
       <NuxtLink
         to="/game/pre-round"
         class="mt-2 cursor-pointer hover:underline"
+        @click="soundsStore.initializeSound"
       >
         {{ ctaLabel }}
       </NuxtLink>
