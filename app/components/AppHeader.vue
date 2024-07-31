@@ -2,6 +2,7 @@
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
 const { locale } = useI18n();
+const route = useRoute();
 </script>
 
 <template>
@@ -13,7 +14,10 @@ const { locale } = useI18n();
             <h1 class="font-medium text-2xl md:text-4xl">{{ $t("brand") }}</h1>
           </NuxtLink>
         </div>
-        <div class="flex justify-center items-center gap-4">
+        <div
+          v-if="route.fullPath !== '/game/round'"
+          class="flex justify-center items-center gap-4"
+        >
           <button
             class="border rounded px-2 py-1"
             :class="{ 'border-blue-800': locale === 'en' }"
