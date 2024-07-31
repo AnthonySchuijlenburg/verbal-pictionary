@@ -3,6 +3,7 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 
 const teamStore = useTeamStore();
+const soundsStore = useSoundsStore();
 
 const ctaLabel = computed(() => {
   return t("round.next");
@@ -27,6 +28,7 @@ const ctaLabel = computed(() => {
       <NuxtLink
         :to="localePath('/game/pre-round')"
         class="mt-2 cursor-pointer hover:underline"
+        @click="soundsStore.initializeSound"
       >
         {{ ctaLabel }}
       </NuxtLink>

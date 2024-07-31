@@ -4,6 +4,7 @@ const localePath = useLocalePath();
 
 const roundStore = useRoundStore();
 const teamStore = useTeamStore();
+const soundsStore = useSoundsStore();
 
 onBeforeMount(() => {
   if (
@@ -60,6 +61,7 @@ const ctaLabel = computed(() => {
       <NuxtLink
         :to="localePath('/game/round')"
         class="mt-2 cursor-pointer hover:underline"
+        @click="soundsStore.initializeSound"
       >
         {{ ctaLabel }}
       </NuxtLink>
