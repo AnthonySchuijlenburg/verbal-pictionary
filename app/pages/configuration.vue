@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
+const localePath = useLocalePath();
+
 const categoryStore = useCategoryStore();
 const soundsStore = useSoundsStore();
 
@@ -39,7 +41,7 @@ const ctaLabel = computed(() => {
 
     <div class="flex justify-center mt-4 md:mt-8">
       <NuxtLink
-        to="/game/pre-round"
+        :to="localePath('/game/pre-round')"
         class="mt-2 cursor-pointer hover:underline"
         @click="soundsStore.initializeSound"
       >

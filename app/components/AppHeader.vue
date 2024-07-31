@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
 const { locale } = useI18n();
 </script>
@@ -8,7 +9,7 @@ const { locale } = useI18n();
     <div class="w-full max-w-3xl px-6 md:max-w-4xl lg:px-0 mx-auto">
       <div class="flex justify-between space-x-4">
         <div class="flex justify-center items-center h-24">
-          <NuxtLink to="/">
+          <NuxtLink :to="localePath('/')">
             <h1 class="font-medium text-2xl md:text-4xl">{{ $t("brand") }}</h1>
           </NuxtLink>
         </div>

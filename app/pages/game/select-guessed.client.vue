@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const { t } = useI18n();
+
 const roundStore = useRoundStore();
+const localePath = useLocalePath();
 
 const round = computed(() => {
   const round = roundStore.rounds[roundStore.rounds.length - 1];
@@ -42,7 +44,10 @@ const ctaLabel = computed(() => {
     </div>
 
     <div class="flex justify-center mt-4 md:mt-8">
-      <NuxtLink to="/game/overview" class="mt-2 cursor-pointer hover:underline">
+      <NuxtLink
+        :to="localePath('/game/overview')"
+        class="mt-2 cursor-pointer hover:underline"
+      >
         {{ ctaLabel }}
       </NuxtLink>
     </div>

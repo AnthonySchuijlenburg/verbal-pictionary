@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n();
+const localePath = useLocalePath();
 
 const ctaLabel = computed(() => {
   return t("start");
@@ -20,7 +21,10 @@ const sections = ["discover", "why", "open_source"];
     <hr class="my-8" />
 
     <div class="flex justify-center mt-4 md:mt-8">
-      <NuxtLink to="/teams" class="mt-2 cursor-pointer hover:underline">
+      <NuxtLink
+        :to="localePath('/teams')"
+        class="mt-2 cursor-pointer hover:underline"
+      >
         {{ ctaLabel }}
       </NuxtLink>
     </div>

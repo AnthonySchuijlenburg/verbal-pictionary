@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const localePath = useLocalePath();
+
 const store = useTeamStore();
 </script>
 
@@ -22,7 +24,10 @@ const store = useTeamStore();
     <hr class="my-8" />
 
     <div class="flex justify-center mt-4 md:mt-8">
-      <NuxtLink to="configuration" class="mt-2 cursor-pointer hover:underline">
+      <NuxtLink
+        :to="localePath('configuration')"
+        class="mt-2 cursor-pointer hover:underline"
+      >
         {{ $t("start") }}
       </NuxtLink>
     </div>
