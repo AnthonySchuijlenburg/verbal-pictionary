@@ -26,9 +26,13 @@ const team = computed(() => {
 });
 
 const selectedPlayer = computed(() => {
-  return team.value.players[
-    Math.floor(Math.random() * team.value.players.length)
-  ]?.name;
+  const rounds: number = roundStore.rounds.filter(
+    (round) => round.teamId === team.value.id,
+  ).length;
+
+  const player = team.value.players[rounds % team.value.players.length]?.name;
+
+  return player ?? team.value.players[0]?.name;
 });
 
 const ctaLabel = computed(() => {
