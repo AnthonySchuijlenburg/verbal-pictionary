@@ -27,7 +27,7 @@ const team = computed(() => {
 
 const selectedPlayer = computed(() => {
   return team.value.players[
-    Math.round(Math.random() * team.value.players.length)
+    Math.floor(Math.random() * team.value.players.length)
   ]?.name;
 });
 
