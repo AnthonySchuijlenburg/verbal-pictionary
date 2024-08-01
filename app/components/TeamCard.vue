@@ -13,6 +13,7 @@ defineProps<{
     <div class="border-b pb-2">
       <InputOrDisplay
         :input-value="team.name"
+        translation-key="teams"
         @update="(value: string) => teamStore.saveTeamName(team, value)"
         @delete="teamStore.deleteTeam(team.id)"
       >
@@ -23,6 +24,7 @@ defineProps<{
       <template v-for="player in team.players" :key="player.id">
         <InputOrDisplay
           :input-value="player.name"
+          translation-key="players"
           @update="
             (value: string) => teamStore.savePlayerName(team, player.id, value)
           "

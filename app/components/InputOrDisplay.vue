@@ -2,6 +2,7 @@
 const editing = ref<boolean>(false);
 const props = defineProps<{
   inputValue: string;
+  translationKey: string;
 }>();
 
 const modelValue = ref<string>(props.inputValue);
@@ -30,7 +31,7 @@ function save() {
       <form class="w-full" @submit.prevent="save">
         <StyledInput
           v-model="modelValue"
-          translation-key="teams.input"
+          :translation-key="`${translationKey}.input`"
           @keyup.enter="save"
         />
       </form>
