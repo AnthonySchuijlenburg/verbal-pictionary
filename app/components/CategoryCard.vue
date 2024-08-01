@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Filter, Filters } from "~/types/Filter";
 
-const categoryStore = useCategoryStore();
+const categoryStore = useCategoriesStore();
 const { t, te } = useI18n();
 
 const detailsOpened = ref<boolean>(false);

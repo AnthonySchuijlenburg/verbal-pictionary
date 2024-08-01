@@ -2,7 +2,7 @@
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-const categoryStore = useCategoryStore();
+const categoryStore = useCategoriesStore();
 const soundsStore = useSoundsStore();
 
 const ctaLabel = computed(() => {

@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 export const useWordsStore = defineStore(
   "words",
   () => {
-    const categoryStore = useCategoryStore();
+    const categoryStore = useCategoriesStore();
     const lastUsedCategories = ref<string>(
       JSON.stringify(categoryStore.enabledCategories),
     );

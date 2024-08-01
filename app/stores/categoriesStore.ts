@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import type { Filter, Filters } from "~/types/Filter";
 
-export const useCategoryStore = defineStore(
+export const useCategoriesStore = defineStore(
   "categories",
   () => {
     const enabledCategories = ref<Filters>(useCategories());
