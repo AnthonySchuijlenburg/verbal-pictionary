@@ -15,7 +15,7 @@ const route = useRoute();
           </NuxtLink>
         </div>
         <div
-          v-if="route.fullPath !== '/game/round'"
+          v-if="!route.fullPath.includes('/game/round')"
           class="flex justify-center items-center gap-4"
         >
           <button
