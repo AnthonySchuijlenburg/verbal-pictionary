@@ -13,5 +13,6 @@ module.exports = {
   rules: {
     "no-console": "error",
     "linebreak-style": ["error", "unix"],
+    curly: ["error", "all"],
   },
 };

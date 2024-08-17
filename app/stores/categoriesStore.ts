@@ -60,8 +60,9 @@ export const useCategoriesStore = defineStore(
     });
 
     function setAllCategories(difficulty: keyof Filter, value: boolean) {
-      for (const category of Object.values(enabledCategories.value))
+      for (const category of Object.values(enabledCategories.value)) {
         category[difficulty] = value;
+      }
     }
 
     return {
