@@ -1,7 +1,7 @@
 {
   brand: "Verbal Pictionary",
   start: "Start Game ->",
-  resume: "Resume Game ->",
+  reset: "Reset Game",
   homepage: {
     discover: {
       title: "Discover Verbal Pictionary",

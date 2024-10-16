@@ -31,10 +31,15 @@ export const useRoundStore = defineStore(
       rounds.value.push(round);
     }
 
+    function resetRounds() {
+      rounds.value = [];
+    }
+
     return {
       rounds,
       roundNumber,
       setNextRound,
+      resetRounds,
     };
   },
   {

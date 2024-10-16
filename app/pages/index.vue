@@ -2,11 +2,20 @@
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-const ctaLabel = computed(() => {
-  return t("start");
-});
+const categoriesStore = useCategoriesStore();
+const roundStore = useRoundStore();
+const teamStore = useTeamStore();
 
 const sections = ["discover", "why", "open_source"];
+
+const isReset = ref<boolean>(roundStore.rounds.length === 0);
+
+function reset() {
+  categoriesStore.resetCategories();
+  roundStore.resetRounds();
+  teamStore.resetTeams();
+  isReset.value = true;
+}
 </script>
 
 <template>
@@ -20,13 +29,20 @@ const sections = ["discover", "why", "open_source"];
 
     <hr class="my-8" />
 
-    <div class="flex justify-center mt-4 md:mt-8">
+    <div class="flex justify-center gap-8 mt-4 md:mt-8">
       <NuxtLink
         :to="localePath('/teams')"
-        class="mt-2 cursor-pointer hover:underline"
+        class="mt-2 cursor-pointer hover:underline border p-2 rounded"
       >
-        {{ ctaLabel }}
+        {{ t("start") }}
       </NuxtLink>
+      <button
+        v-if="!isReset"
+        class="mt-2 cursor-pointer hover:underline border p-2 rounded"
+        @click="reset"
+      >
+        {{ t("reset") }}
+      </button>
     </div>
   </div>
 </template>
