@@ -65,12 +65,19 @@ export const useCategoriesStore = defineStore(
       }
     }
 
+    function resetCategories() {
+      allEasy.value = true;
+      allMedium.value = true;
+      allHard.value = true;
+    }
+
     return {
       enabledCategories,
       setCategory,
       allEasy,
       allMedium,
       allHard,
+      resetCategories,
     };
   },
   {
