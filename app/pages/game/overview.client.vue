@@ -4,9 +4,16 @@ const localePath = useLocalePath();
 
 const teamStore = useTeamStore();
 const soundsStore = useSoundsStore();
+const roundStore = useRoundStore();
 
 const ctaLabel = computed(() => {
-  return t("round.next");
+  return finalRound.value ? t("round.done") : t("round.next");
+});
+
+const finalRound = computed(() => {
+  return (
+    roundStore.rounds.length >= roundStore.maxRound * teamStore.teams.length
+  );
 });
 </script>
 
@@ -17,7 +24,9 @@ const ctaLabel = computed(() => {
     </div>
 
     <div>
-      <h2 class="text-2xl mb-4">{{ $t("round.summary") }}</h2>
+      <h2 class="text-2xl mb-4">
+        {{ finalRound ? $t("round.result") : $t("round.summary") }}
+      </h2>
       <ul>
         <li v-for="team in teamStore.teams" :key="team.id">
           <SummaryTeamSummary :team="team" />
@@ -26,7 +35,7 @@ const ctaLabel = computed(() => {
     </div>
     <div class="flex justify-center mt-4 md:mt-8">
       <NuxtLink
-        :to="localePath('/game/pre-round')"
+        :to="finalRound ? localePath('/') : localePath('/game/pre-round')"
         class="mt-2 cursor-pointer hover:underline"
         @click="soundsStore.initializeSound"
       >

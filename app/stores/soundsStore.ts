@@ -2,9 +2,21 @@ import { defineStore } from "pinia";
 import sound from "/resources/sounds/round-end.mp3";
 
 export const useSoundsStore = defineStore("sounds", () => {
-  const audio = new Audio(sound);
+  let audio: HTMLAudioElement | undefined;
+
+  if (window) {
+    audio = new Audio(sound);
+  }
 
   async function initializeSound() {
+    if (!audio && !window) {
+      return;
+    }
+
+    if (!audio) {
+      audio = new Audio(sound);
+    }
+
     audio.play();
     audio.pause();
     audio.currentTime = 0;

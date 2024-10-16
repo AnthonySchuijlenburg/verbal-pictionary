@@ -36,12 +36,19 @@
       placeholder: "Name of the player",
     },
   },
+  rounds: {
+    label: "Amount of rounds",
+    min: "Minimum 1 round",
+    max: "Maximum {rounds} rounds",
+  },
   round: {
     label: "Round",
     number: "Round {number}",
     time: "Time left: {time}",
     next: "Go to the next round ->",
+    done: "Back to the homepage ->",
     summary: "Score Summary",
+    result: "Final Score",
   },
   pre_round: {
     caution: "Attention! Next players:",
