@@ -16,6 +16,12 @@ function reset() {
   teamStore.resetTeams();
   isReset.value = true;
 }
+
+const finalRound = computed(() => {
+  return (
+    roundStore.rounds.length >= roundStore.maxRound * teamStore.teams.length
+  );
+});
 </script>
 
 <template>
@@ -29,20 +35,23 @@ function reset() {
 
     <hr class="my-8" />
 
-    <div class="flex justify-center gap-8 mt-4 md:mt-8">
-      <NuxtLink
-        :to="localePath('/teams')"
-        class="mt-2 cursor-pointer hover:underline border p-2 rounded"
-      >
-        {{ t("start") }}
-      </NuxtLink>
-      <button
-        v-if="!isReset"
-        class="mt-2 cursor-pointer hover:underline border p-2 rounded"
-        @click="reset"
-      >
-        {{ t("reset") }}
-      </button>
-    </div>
+    <ClientOnly>
+      <div class="flex justify-center gap-8 mt-4 md:mt-8">
+        <NuxtLink
+          v-if="!finalRound"
+          :to="localePath('/teams')"
+          class="mt-2 cursor-pointer hover:underline border p-2 rounded"
+        >
+          {{ t("start") }}
+        </NuxtLink>
+        <button
+          v-if="!isReset"
+          class="mt-2 cursor-pointer hover:underline border p-2 rounded"
+          @click="reset"
+        >
+          {{ t("reset") }}
+        </button>
+      </div>
+    </ClientOnly>
   </div>
 </template>
