@@ -8,7 +8,11 @@ export const useWordsStore = defineStore(
       JSON.stringify(categoryStore.enabledCategories),
     );
 
-    const words = ref<string[]>(useWords(categoryStore.enabledCategories));
+    const usedWords = ref<string[]>([]);
+
+    const words = ref<string[]>(
+      useWords(categoryStore.enabledCategories, usedWords.value),
+    );
 
     watch(categoryStore.enabledCategories, (filters) => {
       // Don't update words if the filters haven't changed
@@ -17,7 +21,7 @@ export const useWordsStore = defineStore(
       }
 
       lastUsedCategories.value = JSON.stringify(filters);
-      words.value = useWords(filters);
+      words.value = useWords(filters, usedWords.value);
     });
 
     function getNextWords(amount: number = 5) {
@@ -27,12 +31,23 @@ export const useWordsStore = defineStore(
 
       const nextWords = words.value.slice(0, amount);
       words.value = words.value.slice(amount);
+      usedWords.value.push(...nextWords);
       return nextWords;
+    }
+
+    function resetSeenWords() {
+      usedWords.value = [];
+      lastUsedCategories.value = JSON.stringify(
+        categoryStore.enabledCategories,
+      );
+      words.value = useWords(categoryStore.enabledCategories, usedWords.value);
     }
 
     return {
       words,
+      usedWords,
       getNextWords,
+      resetSeenWords,
     };
   },
   {
