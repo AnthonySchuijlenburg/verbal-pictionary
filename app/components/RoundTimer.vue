@@ -12,7 +12,9 @@ onMounted(() => {
     const round = roundStore.rounds[roundStore.rounds.length - 1];
 
     if (!round) {
-      throw new Error("No round found");
+      console.error("No round found");
+      clearInterval(interval);
+      return;
     }
 
     if (round.timer === 0) {
@@ -23,6 +25,10 @@ onMounted(() => {
       round.timer -= 1;
     }
   }, 1000);
+});
+
+onUnmounted(() => {
+  clearInterval(interval);
 });
 </script>
 
@@ -39,3 +45,4 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
