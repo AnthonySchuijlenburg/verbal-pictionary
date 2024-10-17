@@ -52,28 +52,30 @@ watch(possibleRounds, () => {
 
     <hr class="my-8" />
 
-    <div class="relative">
-      <label for="labels-range-input">
-        {{ $t("rounds.label") }}: {{ roundStore.maxRound }}
-      </label>
-      <input
-        id="labels-range-input"
-        v-model="roundStore.maxRound"
-        type="range"
-        min="1"
-        :max="possibleRounds"
-        class="w-full h-3 bg-gray-200 rounded-lg border-0 cursor-pointer"
-      />
-      <span
-        class="text-sm text-gray-500 dark:text-gray-400 absolute start-0 -bottom-6"
-      >
-        {{ $t("rounds.min") }}
-      </span>
-      <span
-        class="text-sm text-gray-500 dark:text-gray-400 absolute end-0 -bottom-6"
-        >{{ $t("rounds.max", { rounds: possibleRounds }) }}</span
-      >
-    </div>
+    <ClientOnly>
+      <div class="relative">
+        <label for="labels-range-input">
+          {{ $t("rounds.label") }}: {{ roundStore.maxRound }}
+        </label>
+        <input
+          id="labels-range-input"
+          v-model="roundStore.maxRound"
+          type="range"
+          min="1"
+          :max="possibleRounds"
+          class="w-full h-3 bg-gray-200 rounded-lg border-0 cursor-pointer"
+        />
+        <span
+          class="text-sm text-gray-500 dark:text-gray-400 absolute start-0 -bottom-6"
+        >
+          {{ $t("rounds.min") }}
+        </span>
+        <span
+          class="text-sm text-gray-500 dark:text-gray-400 absolute end-0 -bottom-6"
+          >{{ $t("rounds.max", { rounds: possibleRounds }) }}</span
+        >
+      </div>
+    </ClientOnly>
 
     <hr class="my-8" />
 

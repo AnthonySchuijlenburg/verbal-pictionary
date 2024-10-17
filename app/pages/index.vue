@@ -5,6 +5,7 @@ const localePath = useLocalePath();
 const categoriesStore = useCategoriesStore();
 const roundStore = useRoundStore();
 const teamStore = useTeamStore();
+const wordsStore = useWordsStore();
 
 const sections = ["discover", "why", "open_source"];
 
@@ -14,11 +15,13 @@ function reset() {
   categoriesStore.resetCategories();
   roundStore.resetRounds();
   teamStore.resetTeams();
+  wordsStore.resetSeenWords();
   isReset.value = true;
 }
 
 const finalRound = computed(() => {
   return (
+    roundStore.rounds.length !== 0 &&
     roundStore.rounds.length >= roundStore.maxRound * teamStore.teams.length
   );
 });
