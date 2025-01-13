@@ -1,7 +1,7 @@
 {
   brand: "Verbal Pictionary",
   start: "Spel starten ->",
-  resume: "Spel hervatten ->",
+  reset: "Spel resetten",
   homepage: {
     discover: {
       title: "Ontdek Verbal Pictionary",
@@ -36,12 +36,19 @@
       placeholder: "Naam van de speler",
     },
   },
+  rounds: {
+    label: "Hoeveelheid rondes",
+    min: "Minimaal 1 ronde",
+    max: "Maximaal {rounds} rondes",
+  },
   round: {
     label: "Ronde",
     number: "Ronde {number}",
     time: "Tijd over: {time}",
     next: "Naar de volgende ronde ->",
+    done: "Terug naar de homepagina ->",
     summary: "Tussenstand",
+    result: "Eindstand",
   },
   pre_round: {
     caution: "Let op! Volgende spelers:",

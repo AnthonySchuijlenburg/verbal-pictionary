@@ -9,6 +9,7 @@ export const useRoundStore = defineStore(
     const rounds = ref<Array<Round>>([]);
 
     const roundNumber = computed(() => rounds.value.length);
+    const maxRound = ref<number>(0);
 
     function setNextRound() {
       const team = teamStore.teams[roundNumber.value % teamStore.teams.length];
@@ -31,10 +32,16 @@ export const useRoundStore = defineStore(
       rounds.value.push(round);
     }
 
+    function resetRounds() {
+      rounds.value = [];
+    }
+
     return {
       rounds,
       roundNumber,
+      maxRound,
       setNextRound,
+      resetRounds,
     };
   },
   {

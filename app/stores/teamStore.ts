@@ -7,17 +7,7 @@ export const useTeamStore = defineStore(
   () => {
     const { t } = useI18n();
 
-    const teams = ref<Team[]>([
-      {
-        id: useUuid(),
-        name: t("teams.placeholder", { id: 1 }),
-        score: 0,
-        players: [
-          { id: useUuid(), name: t("players.placeholder", { id: 1 }) },
-          { id: useUuid(), name: t("players.placeholder", { id: 2 }) },
-        ],
-      },
-    ]);
+    const teams = ref<Team[]>([getDefaultTeam()]);
 
     const addTeam = () => {
       const teamLength = teams.value.length;
@@ -68,6 +58,22 @@ export const useTeamStore = defineStore(
       team.players = team.players.filter((player: Player) => player.id !== id);
     };
 
+    function resetTeams() {
+      teams.value = [getDefaultTeam()];
+    }
+
+    function getDefaultTeam() {
+      return {
+        id: useUuid(),
+        name: t("teams.placeholder", { id: 1 }),
+        score: 0,
+        players: [
+          { id: useUuid(), name: t("players.placeholder", { id: 1 }) },
+          { id: useUuid(), name: t("players.placeholder", { id: 2 }) },
+        ],
+      };
+    }
+
     return {
       teams,
       addTeam,
@@ -77,6 +83,7 @@ export const useTeamStore = defineStore(
       addPlayer,
       savePlayerName,
       deletePlayer,
+      resetTeams,
     };
   },
   {
