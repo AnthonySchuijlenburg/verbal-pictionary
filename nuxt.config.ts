@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: "locales",
     defaultLocale: "nl",
+    restructureDir: false,
   },
   lucide: {
     namePrefix: "Icon",
