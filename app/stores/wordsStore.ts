@@ -36,10 +36,15 @@ export const useWordsStore = defineStore(
       return nextWords;
     }
 
+    function resetSeenWords() {
+      seenWords.value = [];
+    }
+
     return {
       words,
       seenWords,
       getNextWords,
+      resetSeenWords,
     };
   },
   {
