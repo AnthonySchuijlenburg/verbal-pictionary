@@ -45,9 +45,9 @@ const categoryLabel = computed(() => {
   <div class="rounded-2xl border p-4" :class="{ 'bg-gray-100': noneSelected }">
     <div
       class="flex justify-between"
-      :class="{ 'border-b pb-4 ': detailsOpened }"
+      :class="{ 'border-b pb-4': detailsOpened }"
     >
-      <label class="flex justify-center items-center gap-2">
+      <label class="flex items-center justify-center gap-2">
         <input
           v-model="allSelected"
           :indeterminate.prop="!allSelected && !noneSelected"
@@ -57,7 +57,7 @@ const categoryLabel = computed(() => {
         {{ categoryLabel }}
       </label>
       <button
-        class="flex justify-center items-center"
+        class="flex items-center justify-center"
         type="button"
         @click="detailsOpened = !detailsOpened"
       >

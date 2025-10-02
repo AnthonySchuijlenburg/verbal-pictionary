@@ -8,11 +8,11 @@ const modelValue = defineModel<boolean>();
 
 <template>
   <div
-    class="rounded-2xl border p-4 w-full"
+    class="w-full rounded-2xl border p-4"
     :class="{ 'bg-gray-100': !modelValue }"
   >
     <div class="flex justify-between">
-      <label class="flex justify-center items-center gap-2">
+      <label class="flex items-center justify-center gap-2">
         <input v-model="modelValue" type="checkbox" class="cursor-pointer" />
         {{ $t(translationKey) }}
       </label>

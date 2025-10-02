@@ -26,7 +26,7 @@ function save() {
 </script>
 
 <template>
-  <div class="flex justify-between align-center gap-4">
+  <div class="align-center flex justify-between gap-4">
     <template v-if="editing">
       <form class="w-full" @submit.prevent="save">
         <StyledInput
@@ -37,7 +37,7 @@ function save() {
       </form>
     </template>
     <div v-else>
-      <slot />
+      <slot></slot>
     </div>
     <div class="flex gap-2" :class="{ 'items-end pb-2': editing }">
       <button @click="editing = !editing">

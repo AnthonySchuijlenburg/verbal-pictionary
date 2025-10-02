@@ -24,7 +24,7 @@ const finalRound = computed(() => {
     </div>
 
     <div>
-      <h2 class="text-2xl mb-4">
+      <h2 class="mb-4 text-2xl">
         {{ finalRound ? $t("round.result") : $t("round.summary") }}
       </h2>
       <ul>
@@ -33,7 +33,7 @@ const finalRound = computed(() => {
         </li>
       </ul>
     </div>
-    <div class="flex justify-center mt-4 md:mt-8">
+    <div class="mt-4 flex justify-center md:mt-8">
       <NuxtLink
         :to="finalRound ? localePath('/') : localePath('/game/pre-round')"
         class="mt-2 cursor-pointer hover:underline"

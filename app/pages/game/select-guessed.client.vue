@@ -29,7 +29,7 @@ const ctaLabel = computed(() => {
     <div class="rounded-2xl border p-4">
       <div v-for="(word, index) in round.questions" :key="word.word">
         <div
-          class="flex justify-between cursor-pointer"
+          class="flex cursor-pointer justify-between"
           @click="word.guessed = !word.guessed"
         >
           <h2 class="text-xl font-medium">{{ $t(`words.${word.word}`) }}</h2>
@@ -44,7 +44,7 @@ const ctaLabel = computed(() => {
       </div>
     </div>
 
-    <div class="flex justify-center mt-4 md:mt-8">
+    <div class="mt-4 flex justify-center md:mt-8">
       <NuxtLink
         :to="localePath('/game/overview')"
         class="mt-2 cursor-pointer hover:underline"
