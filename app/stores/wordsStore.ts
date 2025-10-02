@@ -44,7 +44,7 @@ export const useWordsStore = defineStore(
   },
   {
     persist: {
-      storage: persistedState.localStorage,
+      storage: piniaPluginPersistedstate.localStorage(),
     },
   },
 );

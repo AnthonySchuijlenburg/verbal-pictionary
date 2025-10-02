@@ -46,7 +46,7 @@ export const useRoundStore = defineStore(
   },
   {
     persist: {
-      storage: persistedState.localStorage,
+      storage: piniaPluginPersistedstate.localStorage(),
     },
   },
 );
