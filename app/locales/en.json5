@@ -15,6 +15,10 @@
       title: "Open Source",
       content: "Verbal Pictionary is open source. This means that anyone can view, modify, and improve the source code. By making the game open source, I hope to create a community that contributes to its continuous improvement.",
     },
+    pwa: {
+      title: "Progressive Web App",
+      content: "You can install this site as a progressive web app, this will make sure the app runs in a standalone app window and has offline support.",
+    },
   },
   teams: {
     label: "Teams",

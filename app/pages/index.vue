@@ -7,7 +7,7 @@ const roundStore = useRoundStore();
 const teamStore = useTeamStore();
 const wordsStore = useWordsStore();
 
-const sections = ["discover", "why", "open_source"];
+const sections = ["discover", "why", "open_source", "pwa"];
 
 const isReset = ref<boolean>(roundStore.rounds.length === 0);
 
