@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
-    // "@pinia-plugin-persistedstate/nuxt",
+    "pinia-plugin-persistedstate/nuxt",
     "nuxt-lucide-icons",
     "@nuxt/eslint",
   ],

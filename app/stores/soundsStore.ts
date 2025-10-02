@@ -23,7 +23,7 @@ export const useSoundsStore = defineStore("sounds", () => {
   }
 
   function playSound() {
-    audio.play();
+    audio?.play();
   }
 
   return {

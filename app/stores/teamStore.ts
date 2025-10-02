@@ -88,7 +88,7 @@ export const useTeamStore = defineStore(
   },
   {
     persist: {
-      storage: persistedState.cookiesWithOptions({
+      storage: piniaPluginPersistedstate.cookies({
         sameSite: "strict",
         maxAge: 60 * 60 * 24 * 7,
       }),
