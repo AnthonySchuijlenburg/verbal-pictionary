@@ -47,7 +47,7 @@ const ctaLabel = computed(() => {
     </div>
 
     <div>
-      <h2 class="text-2xl mb-4">{{ $t("pre_round.caution") }}</h2>
+      <h2 class="mb-4 text-2xl">{{ $t("pre_round.caution") }}</h2>
       <ul class="mb-8">
         <li v-for="player in team.players" :key="player.id" class="ml-4">
           {{ player.name }}
@@ -56,12 +56,12 @@ const ctaLabel = computed(() => {
     </div>
 
     <div>
-      <h2 class="text-2xl mb-4">
+      <h2 class="mb-4 text-2xl">
         {{ $t("pre_round.next", { name: selectedPlayer }) }}
       </h2>
     </div>
 
-    <div class="flex justify-center mt-4 md:mt-8">
+    <div class="mt-4 flex justify-center md:mt-8">
       <NuxtLink
         :to="localePath('/game/round')"
         class="mt-2 cursor-pointer hover:underline"

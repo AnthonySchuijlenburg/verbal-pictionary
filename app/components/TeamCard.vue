@@ -20,7 +20,7 @@ defineProps<{
         <h3 class="text-xl">{{ team.name }}</h3>
       </InputOrDisplay>
     </div>
-    <ol class="mt-4 flex flex-col gap-2 pb-4 border-b">
+    <ol class="mt-4 flex flex-col gap-2 border-b pb-4">
       <template v-for="player in team.players" :key="player.id">
         <InputOrDisplay
           :input-value="player.name"
@@ -30,7 +30,7 @@ defineProps<{
           "
           @delete="teamStore.deletePlayer(team, player.id)"
         >
-          <li class="ml-6 pl-4 list-decimal">
+          <li class="ml-6 list-decimal pl-4">
             {{ player.name }}
           </li>
         </InputOrDisplay>

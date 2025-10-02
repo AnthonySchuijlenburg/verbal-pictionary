@@ -25,7 +25,7 @@ watch(possibleRounds, () => {
 
 <template>
   <div>
-    <div class="border-b-2 pb-8 flex flex-col gap-4 items-center md:flex-row">
+    <div class="flex flex-col items-center gap-4 border-b-2 pb-8 md:flex-row">
       <DifficultySelector
         v-model="categoryStore.allEasy"
         translation-key="difficulties.easy"
@@ -41,7 +41,7 @@ watch(possibleRounds, () => {
         translation-key="difficulties.hard"
       />
     </div>
-    <div class="grid gap-4 md:grid-cols-2 md:gap-8 mt-8">
+    <div class="mt-8 grid gap-4 md:grid-cols-2 md:gap-8">
       <CategoryCard
         v-for="(category, key) of categoryStore.enabledCategories"
         :key="key"
@@ -63,15 +63,15 @@ watch(possibleRounds, () => {
           type="range"
           min="1"
           :max="possibleRounds"
-          class="w-full h-3 bg-gray-200 rounded-lg border-0 cursor-pointer"
+          class="h-3 w-full cursor-pointer rounded-lg border-0 bg-gray-200"
         />
         <span
-          class="text-sm text-gray-500 dark:text-gray-400 absolute start-0 -bottom-6"
+          class="absolute -bottom-6 start-0 text-sm text-gray-500 dark:text-gray-400"
         >
           {{ $t("rounds.min") }}
         </span>
         <span
-          class="text-sm text-gray-500 dark:text-gray-400 absolute end-0 -bottom-6"
+          class="absolute -bottom-6 end-0 text-sm text-gray-500 dark:text-gray-400"
           >{{ $t("rounds.max", { rounds: possibleRounds }) }}</span
         >
       </div>
@@ -79,7 +79,7 @@ watch(possibleRounds, () => {
 
     <hr class="my-8" />
 
-    <div class="flex justify-center mt-4 md:mt-8">
+    <div class="mt-4 flex justify-center md:mt-8">
       <NuxtLink
         :to="localePath('/game/pre-round')"
         class="mt-2 cursor-pointer hover:underline"

@@ -30,7 +30,7 @@ const finalRound = computed(() => {
 <template>
   <div>
     <div v-for="section in sections" :key="section" class="mb-8">
-      <h2 class="text-xl font-medium mb-2">
+      <h2 class="mb-2 text-xl font-medium">
         {{ $t(`homepage.${section}.title`) }}
       </h2>
       <p>{{ $t(`homepage.${section}.content`) }}</p>
@@ -39,17 +39,17 @@ const finalRound = computed(() => {
     <hr class="my-8" />
 
     <ClientOnly>
-      <div class="flex justify-center gap-8 mt-4 md:mt-8">
+      <div class="mt-4 flex justify-center gap-8 md:mt-8">
         <NuxtLink
           v-if="!finalRound"
           :to="localePath('/teams')"
-          class="mt-2 cursor-pointer hover:underline border p-2 rounded"
+          class="mt-2 cursor-pointer rounded border p-2 hover:underline"
         >
           {{ t("start") }}
         </NuxtLink>
         <button
           v-if="!isReset"
-          class="mt-2 cursor-pointer hover:underline border p-2 rounded"
+          class="mt-2 cursor-pointer rounded border p-2 hover:underline"
           @click="reset"
         >
           {{ t("reset") }}

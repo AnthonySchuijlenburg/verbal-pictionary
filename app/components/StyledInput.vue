@@ -17,10 +17,10 @@ const modelValue = defineModel<string | number | null>();
 </script>
 
 <template>
-  <div class="flex flex-col w-full">
+  <div class="flex w-full flex-col">
     <label
       :for="translationKey"
-      class="block mb-2 text-sm font-medium text-gray-900"
+      class="mb-2 block text-sm font-medium text-gray-900"
     >
       {{ $t(`${translationKey}.label`) }}
     </label>
@@ -32,7 +32,7 @@ const modelValue = defineModel<string | number | null>();
       :maxlength="maxLength"
       :placeholder="$t(`${translationKey}.placeholder`)"
       v-bind="$attrs"
-      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500"
     />
   </div>
 </template>
