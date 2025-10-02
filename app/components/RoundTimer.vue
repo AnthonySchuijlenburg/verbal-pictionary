@@ -12,6 +12,7 @@ onMounted(() => {
     const round = roundStore.rounds[roundStore.rounds.length - 1];
 
     if (!round) {
+      clearInterval(interval);
       throw new Error("No round found");
     }
 
@@ -23,6 +24,10 @@ onMounted(() => {
       round.timer -= 1;
     }
   }, 1000);
+});
+
+onUnmounted(() => {
+  clearInterval(interval);
 });
 </script>
 
