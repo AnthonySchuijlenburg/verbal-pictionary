@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     locales: [
       { code: "nl", language: "nl-NL", files: ["nl.json5", "words.nl.json5"] },
       { code: "en", language: "en-US", files: ["en.json5", "words.en.json5"] },
+      { code: "pl", language: "pl-PL", files: ["pl.json5", "words.pl.json5"] },
     ],
     langDir: "locales",
     defaultLocale: "nl",
