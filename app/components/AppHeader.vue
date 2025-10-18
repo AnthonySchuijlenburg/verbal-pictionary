@@ -34,7 +34,7 @@ const route = useRoute();
             class="rounded border px-2 py-1"
             :class="{ 'border-blue-800': locale === 'pl' }"
           >
-            <NuxtLink :to="switchLocalePath('nl')">Polski</NuxtLink>
+            <NuxtLink :to="switchLocalePath('pl')">Polski</NuxtLink>
           </button>
         </div>
       </div>
