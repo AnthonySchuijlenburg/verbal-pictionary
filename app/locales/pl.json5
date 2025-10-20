@@ -1,0 +1,87 @@
+{
+  brand: "Verbal Pictionary",
+  start: "Rozpocznij grę",
+  reset: "Zacznij od nowa",
+  homepage: {
+    discover: {
+      title: "Odkryj Verbal Pictionary",
+      content: "Verbal Pictionary to ekscytująca nowa gra zespołowa, w której jedna osoba opisuje słowo bez jego nazwy, a reszta drużyny musi je odgadnąć. To doskonała zabawa dla przyjaciół, rodzin i współpracowników, którzy lubią wyzwania.",
+    },
+    why: {
+      title: "Dlaczego Verbal Pictionary?",
+      content: "Stworzyliśmy Verbal Pictionary, ponieważ brakowało dobrych, darmowych alternatyw. Wiele istniejących gier jest drogich lub pozbawionych jakości i elastyczności. Dlatego postanowiliśmy opracować dostępną i zabawną grę dla wszystkich.",
+    },
+    open_source: {
+      title: "Open Source",
+      content: "Verbal Pictionary jest projektem open source. Oznacza to, że każdy może przeglądać, modyfikować i ulepszać jego kod źródłowy. Udostępniając grę jako open source, mamy nadzieję stworzyć społeczność, która będzie wspólnie ją rozwijać.",
+    },
+    pwa: {
+      title: "Aplikacja progresywna (PWA)",
+      content: "Możesz zainstalować tę stronę jako aplikację progresywną. Dzięki temu gra uruchomi się w osobnym oknie i będzie działać również w trybie offline.",
+    },
+  },
+  teams: {
+    label: "Drużyny",
+    placeholder: "Drużyna nr {id}",
+    add: "Dodaj drużynę",
+    empty: "Nie dodano jeszcze żadnej drużyny",
+    input: {
+      label: "Drużyna",
+      placeholder: "Nazwa drużyny",
+    },
+  },
+  players: {
+    label: "Gracze",
+    placeholder: "Gracz nr {id}",
+    add: "Dodaj gracza",
+    empty: "Nie dodano jeszcze żadnego gracza",
+    input: {
+      label: "Gracz",
+      placeholder: "Nazwa gracza",
+    },
+  },
+  rounds: {
+    label: "Ilość rund",
+    min: "Minimum 1 runda",
+    max: "Maksymalnie {rounds} rund",
+  },
+  round: {
+    label: "Runda",
+    number: "Runda nr {number}",
+    time: "Pozostały czas: {time}",
+    next: "Przejdź do następnej rundy ->",
+    done: "Powrót do strony głównej ->",
+    summary: "Podsumowanie",
+    result: "Wynik końcowy",
+  },
+  pre_round: {
+    caution: "Uwaga! Następni gracze:",
+    next: "Następny gracz: {name}",
+  },
+  difficulties: {
+    easy: "Łatwy",
+    medium: "Średni",
+    hard: "Trudny",
+    all: "Wszystkie {category}",
+  },
+  categories: {
+    animals: "Zwierzęta",
+    objects: "Obiekty",
+    sports: "Sporty",
+    occupations: "Zawody",
+    countries: "Kraje",
+    software: "Oprogramowanie",
+    brands: "Marki",
+    verbs: "Czasowniki",
+    famous_people: "Celebryci",
+    famous_dutch_people: "Znani Holendrzy",
+    movies: "Filmy",
+    foods: "Jedzenie",
+    landmarks: "Zabytki",
+    cities: "Miasta",
+    languages: "Języki",
+    tv_shows: "Programy Telewizyjne",
+    games: "Gry",
+    bands: "Zespoły muzyczne",
+  },
+}
